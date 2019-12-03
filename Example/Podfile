@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'tdmodalalert_Example' do
+  pod 'tdmodalalert', :path => '../'
+
+  target 'tdmodalalert_Tests' do
+    inherit! :search_paths
+
+    pod 'FBSnapshotTestCase' , '~> 2.1.4'
+  end
+end
