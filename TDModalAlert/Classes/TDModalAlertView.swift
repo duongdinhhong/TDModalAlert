@@ -46,6 +46,8 @@ extension TDModalAlertView {
         headlineLabel.text = ""
         subheadLabel.text = ""
         contentView.alpha = 0.0
+        contentView.layer.cornerRadius = 4
+        contentView.layer.masksToBounds = true
     }
     
     // Provide functions to update view

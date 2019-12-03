@@ -18,6 +18,7 @@
 		3456EDF82396A0D90018FA66 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 3456EDF72396A0D90018FA66 /* .gitkeep */; };
 		3456EDFB2396A0E60018FA66 /* TDModalAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3456EDF92396A0E60018FA66 /* TDModalAlertView.xib */; };
 		3456EDFC2396A0E60018FA66 /* TDModalAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3456EDFA2396A0E60018FA66 /* TDModalAlertView.swift */; };
+		3456EE012396A6410018FA66 /* ic_success.png in Resources */ = {isa = PBXBuildFile; fileRef = 3456EE002396A6410018FA66 /* ic_success.png */; };
 		40039E0AF0D764360B1D4FC4F7950D2E /* UIApplication+StrictKeyWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A3ACA72AE9B776E644F6D159AB3E80B /* UIApplication+StrictKeyWindow.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		6AE239C5D116E1C06F5705699FB9EAF0 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E601BD54DA9BF4071437E60125281FA /* XCTest.framework */; };
 		6DBC8EB7532E931C2FBDA71D1E0B66A4 /* FBSnapshotTestCase-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A83AE4362CF1D4764E00E4602A2D648 /* FBSnapshotTestCase-dummy.m */; };
@@ -81,6 +82,7 @@
 		3456EDF72396A0D90018FA66 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		3456EDF92396A0E60018FA66 /* TDModalAlertView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TDModalAlertView.xib; sourceTree = "<group>"; };
 		3456EDFA2396A0E60018FA66 /* TDModalAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TDModalAlertView.swift; sourceTree = "<group>"; };
+		3456EE002396A6410018FA66 /* ic_success.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_success.png; sourceTree = "<group>"; };
 		35CD92FC77672E1C01603353408ADF19 /* Pods-TDModalAlert_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TDModalAlert_Tests-dummy.m"; sourceTree = "<group>"; };
 		3A480EC83F61AB7EACA22D29C9010B80 /* Pods-TDModalAlert_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TDModalAlert_Example-frameworks.sh"; sourceTree = "<group>"; };
 		3A83AE4362CF1D4764E00E4602A2D648 /* FBSnapshotTestCase-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FBSnapshotTestCase-dummy.m"; sourceTree = "<group>"; };
@@ -179,6 +181,14 @@
 			path = TDModalAlert/Classes;
 			sourceTree = "<group>";
 		};
+		3456EDFD2396A6330018FA66 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				3456EE002396A6410018FA66 /* ic_success.png */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 		429C1E015F155666A3ADFDBB18C4A900 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -245,6 +255,7 @@
 		824641FF555D9E868D6FCF0919518D9F /* TDModalAlert */ = {
 			isa = PBXGroup;
 			children = (
+				3456EDFD2396A6330018FA66 /* Assets */,
 				3456EDF62396A0D90018FA66 /* Classes */,
 				7EA57B6B4D612E87F8CE77519C18BB3C /* Pod */,
 				FE472DF4E12A3C1EFBC83F0B9DDE73C3 /* Support Files */,
@@ -531,6 +542,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3456EE012396A6410018FA66 /* ic_success.png in Resources */,
 				3456EDF82396A0D90018FA66 /* .gitkeep in Resources */,
 				3456EDFB2396A0E60018FA66 /* TDModalAlertView.xib in Resources */,
 			);

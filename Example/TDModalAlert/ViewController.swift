@@ -7,12 +7,18 @@
 //
 
 import UIKit
+import TDModalAlert
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        view.backgroundColor = .lightGray
+        let alert = TDModalAlertView(frame: view.bounds)
+        alert.set(headline: "Success")
+        alert.set(subheading: "You've successfully showed alert !")
+        view.addSubview(alert)
     }
 
     override func didReceiveMemoryWarning() {
