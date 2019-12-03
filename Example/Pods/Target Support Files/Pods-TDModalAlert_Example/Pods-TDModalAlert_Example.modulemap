@@ -1,0 +1,6 @@
+framework module Pods_TDModalAlert_Example {
+  umbrella header "Pods-TDModalAlert_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

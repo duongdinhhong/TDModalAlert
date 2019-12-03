@@ -1,0 +1,6 @@
+framework module TDModalAlert {
+  umbrella header "TDModalAlert-umbrella.h"
+
+  export *
+  module * { export * }
+}

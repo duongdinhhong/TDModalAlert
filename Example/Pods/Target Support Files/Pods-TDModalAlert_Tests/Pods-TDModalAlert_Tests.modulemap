@@ -1,0 +1,6 @@
+framework module Pods_TDModalAlert_Tests {
+  umbrella header "Pods-TDModalAlert_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

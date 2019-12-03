@@ -1,0 +1,22 @@
+{
+  "name": "TDModalAlert",
+  "version": "0.1.0",
+  "summary": "A short description of TDModalAlert.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/duongdh93@gmail.com/TDModalAlert",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "duongdh93@gmail.com": "duongdh93@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/duongdh93@gmail.com/TDModalAlert.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "TDModalAlert/Classes/**/*"
+}
