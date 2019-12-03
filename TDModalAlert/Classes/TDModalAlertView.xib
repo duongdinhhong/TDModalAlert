@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TDModalAlertView" customModule="TDModalAlert" customModuleProvider="target">
+            <connections>
+                <outlet property="headlineLabel" destination="YZg-s4-toq" id="3hA-sj-ukn"/>
+                <outlet property="statusImage" destination="4Mo-v7-YiG" id="S1V-6h-gDh"/>
+                <outlet property="subheadLabel" destination="SqG-EL-VMg" id="5Cb-a1-pnp"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <visualEffectView opaque="NO" contentMode="scaleToFill" id="Gyf-T5-c0e">
+            <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="WMT-8d-g1W" customClass="AOModalAlertView" customModule="TDModalAlert" customModuleProvider="target">
+                <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_success.png" translatesAutoresizingMaskIntoConstraints="NO" id="4Mo-v7-YiG">
+                        <rect key="frame" x="40" y="10" width="70" height="70"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="70" id="2Cd-r3-B7m"/>
+                            <constraint firstAttribute="height" constant="70" id="AKS-yL-SKF"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YZg-s4-toq">
+                        <rect key="frame" x="0.0" y="100" width="150" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SqG-EL-VMg">
+                        <rect key="frame" x="0.0" y="126" width="150" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="SqG-EL-VMg" firstAttribute="top" secondItem="YZg-s4-toq" secondAttribute="bottom" constant="5" id="GRK-WJ-nja"/>
+                    <constraint firstItem="YZg-s4-toq" firstAttribute="leading" secondItem="WMT-8d-g1W" secondAttribute="leading" id="HDK-S6-O7h"/>
+                    <constraint firstItem="4Mo-v7-YiG" firstAttribute="top" secondItem="WMT-8d-g1W" secondAttribute="top" constant="10" id="ca1-xW-lnp"/>
+                    <constraint firstAttribute="trailing" secondItem="YZg-s4-toq" secondAttribute="trailing" id="keO-ho-k89"/>
+                    <constraint firstAttribute="trailing" secondItem="SqG-EL-VMg" secondAttribute="trailing" id="oW0-4c-aGp"/>
+                    <constraint firstItem="SqG-EL-VMg" firstAttribute="leading" secondItem="WMT-8d-g1W" secondAttribute="leading" id="oiK-LU-rYh"/>
+                    <constraint firstItem="4Mo-v7-YiG" firstAttribute="centerX" secondItem="WMT-8d-g1W" secondAttribute="centerX" id="xpT-p5-EW1"/>
+                    <constraint firstItem="YZg-s4-toq" firstAttribute="top" secondItem="4Mo-v7-YiG" secondAttribute="bottom" constant="20" id="yer-AD-9O5"/>
+                </constraints>
+            </view>
+            <blurEffect style="regular"/>
+            <point key="canvasLocation" x="-426.08695652173918" y="-18.080357142857142"/>
+        </visualEffectView>
+    </objects>
+    <resources>
+        <image name="ic_success.png" width="256" height="256"/>
+    </resources>
+</document>

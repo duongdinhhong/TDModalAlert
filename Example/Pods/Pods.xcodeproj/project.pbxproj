@@ -15,8 +15,10 @@
 		2654E47CDE1DCF9D21AD0A2953839FA3 /* Pods-TDModalAlert_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 35CD92FC77672E1C01603353408ADF19 /* Pods-TDModalAlert_Tests-dummy.m */; };
 		2BCDCC795F91DEB649B246BFE003E432 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BD4ED544B638D07C7D755AF1C27116A /* Foundation.framework */; };
 		2DCFF0CE0BD295F1D46D3247F36B192C /* UIImage+Compare.m in Sources */ = {isa = PBXBuildFile; fileRef = EF53D290F564A9B10CEF56C9DC2010F2 /* UIImage+Compare.m */; };
+		3456EDF82396A0D90018FA66 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 3456EDF72396A0D90018FA66 /* .gitkeep */; };
+		3456EDFB2396A0E60018FA66 /* TDModalAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3456EDF92396A0E60018FA66 /* TDModalAlertView.xib */; };
+		3456EDFC2396A0E60018FA66 /* TDModalAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3456EDFA2396A0E60018FA66 /* TDModalAlertView.swift */; };
 		40039E0AF0D764360B1D4FC4F7950D2E /* UIApplication+StrictKeyWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A3ACA72AE9B776E644F6D159AB3E80B /* UIApplication+StrictKeyWindow.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		5EC669D4D435CB9152F9DE7D7E5FC801 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7FB4B6F857A904F48DF379A9C76A27 /* ReplaceMe.swift */; };
 		6AE239C5D116E1C06F5705699FB9EAF0 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E601BD54DA9BF4071437E60125281FA /* XCTest.framework */; };
 		6DBC8EB7532E931C2FBDA71D1E0B66A4 /* FBSnapshotTestCase-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A83AE4362CF1D4764E00E4602A2D648 /* FBSnapshotTestCase-dummy.m */; };
 		73CBF9231E9EAD8EC2798B9F9A90D142 /* Pods-TDModalAlert_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D6F3FC9CC22C6C081F4FBC1A83E4B766 /* Pods-TDModalAlert_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -76,6 +78,9 @@
 		25CFB91325E55BA93F91DB8F732526AD /* Pods-TDModalAlert_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TDModalAlert_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		26D8C0916282746532B6EB1C914D7B84 /* Pods-TDModalAlert_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TDModalAlert_Tests-umbrella.h"; sourceTree = "<group>"; };
 		2B2AE408216D9623734FCBC72FB54731 /* Pods-TDModalAlert_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TDModalAlert_Example-Info.plist"; sourceTree = "<group>"; };
+		3456EDF72396A0D90018FA66 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		3456EDF92396A0E60018FA66 /* TDModalAlertView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TDModalAlertView.xib; sourceTree = "<group>"; };
+		3456EDFA2396A0E60018FA66 /* TDModalAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TDModalAlertView.swift; sourceTree = "<group>"; };
 		35CD92FC77672E1C01603353408ADF19 /* Pods-TDModalAlert_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TDModalAlert_Tests-dummy.m"; sourceTree = "<group>"; };
 		3A480EC83F61AB7EACA22D29C9010B80 /* Pods-TDModalAlert_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TDModalAlert_Example-frameworks.sh"; sourceTree = "<group>"; };
 		3A83AE4362CF1D4764E00E4602A2D648 /* FBSnapshotTestCase-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FBSnapshotTestCase-dummy.m"; sourceTree = "<group>"; };
@@ -99,7 +104,6 @@
 		88EE4F95531D217A595AA8D85A24FA39 /* FBSnapshotTestController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestController.h; path = FBSnapshotTestCase/FBSnapshotTestController.h; sourceTree = "<group>"; };
 		8CAA89EEF1039078430D7A886477E365 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		8F1FE5C23F1BC485C54B92C32E78391F /* UIApplication+StrictKeyWindow.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIApplication+StrictKeyWindow.m"; path = "FBSnapshotTestCase/Categories/UIApplication+StrictKeyWindow.m"; sourceTree = "<group>"; };
-		8F7FB4B6F857A904F48DF379A9C76A27 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = TDModalAlert/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
 		925C3DD0F5FFB04CB63A1C64146504F7 /* Pods_TDModalAlert_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TDModalAlert_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		95FA9ED5C6E3E924F32152BC4B429CAD /* TDModalAlert.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = TDModalAlert.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		98FD387DFA194173633270BAF1BCD859 /* FBSnapshotTestCase.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FBSnapshotTestCase.modulemap; sourceTree = "<group>"; };
@@ -164,6 +168,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3456EDF62396A0D90018FA66 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				3456EDFA2396A0E60018FA66 /* TDModalAlertView.swift */,
+				3456EDF92396A0E60018FA66 /* TDModalAlertView.xib */,
+				3456EDF72396A0D90018FA66 /* .gitkeep */,
+			);
+			name = Classes;
+			path = TDModalAlert/Classes;
+			sourceTree = "<group>";
+		};
 		429C1E015F155666A3ADFDBB18C4A900 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -230,7 +245,7 @@
 		824641FF555D9E868D6FCF0919518D9F /* TDModalAlert */ = {
 			isa = PBXGroup;
 			children = (
-				8F7FB4B6F857A904F48DF379A9C76A27 /* ReplaceMe.swift */,
+				3456EDF62396A0D90018FA66 /* Classes */,
 				7EA57B6B4D612E87F8CE77519C18BB3C /* Pod */,
 				FE472DF4E12A3C1EFBC83F0B9DDE73C3 /* Support Files */,
 			);
@@ -516,6 +531,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3456EDF82396A0D90018FA66 /* .gitkeep in Resources */,
+				3456EDFB2396A0E60018FA66 /* TDModalAlertView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -579,8 +596,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5EC669D4D435CB9152F9DE7D7E5FC801 /* ReplaceMe.swift in Sources */,
 				898CEDA0961A56466EF00F9F045F2A1D /* TDModalAlert-dummy.m in Sources */,
+				3456EDFC2396A0E60018FA66 /* TDModalAlertView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -745,6 +762,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1C3C36FD3835C934E9122EB4054CCE8A /* TDModalAlert.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -765,6 +783,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -899,6 +918,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1C3C36FD3835C934E9122EB4054CCE8A /* TDModalAlert.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
