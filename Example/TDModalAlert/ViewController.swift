@@ -17,7 +17,7 @@ class ViewController: UIViewController {
         view.backgroundColor = .lightGray
         let alert = TDModalAlertView(frame: view.bounds)
         alert.set(headline: "Success")
-        alert.set(subheading: "You've successfully showed alert !")
+        alert.set(message: "You've successfully showed alert !")
         view.addSubview(alert)
     }
 
