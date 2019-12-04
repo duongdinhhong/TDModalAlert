@@ -9,24 +9,88 @@ import UIKit
 
 public class TDModalAlertView: UIView {
     
-    // MARK: - Outlets
+    // MARK: - Views
+    lazy var visualEffectView: UIVisualEffectView = {
+        let visualEffect = UIBlurEffect(style: UIBlurEffect.Style.dark)
+        let visualEffectView = UIVisualEffectView(effect: visualEffect)
+        visualEffectView.translatesAutoresizingMaskIntoConstraints = false
+        visualEffectView.layer.cornerRadius = 5
+        visualEffectView.layer.masksToBounds = true
+        
+        return visualEffectView
+    }()
     
-    @IBOutlet weak var statusImage: UIImageView!
-    @IBOutlet weak var headlineLabel: UILabel!
-    @IBOutlet weak var subheadLabel: UILabel!
+    // MARK: - Container view
+    lazy var containerView: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = .clear
+        
+        return view
+    }()
     
-    let nibName = "TDModalAlertView"
-    var contentView: UIView!
-    var timer: Timer?
+    /// Content view
+    lazy var contentView: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.backgroundColor = .clear
+        
+        return view
+    }()
     
-    public override init(frame: CGRect) {
-        super.init(frame: frame)
+    /// Status image view
+    lazy var statusImage: UIImageView = {
+        let imageView = UIImageView()
+        imageView.backgroundColor = .clear
+        
+        if let imagePath = Bundle.init(for: TDModalAlertView.self).path(forResource: "ic_success", ofType: "png") {
+            imageView.image = UIImage(contentsOfFile: imagePath)
+        }
+        imageView.contentMode = .scaleToFill
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        
+        return imageView
+    }()
+    
+    /// Headline label
+    lazy var headlineLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 17)
+        label.textColor = .white
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textAlignment = .center
+        
+        return label
+    }()
+    
+    /// Message label
+    lazy var messageLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 15)
+        label.textColor = .white
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textAlignment = .center
+        label.numberOfLines = 2
+        
+        return label
+    }()
+    
+    // MARK: - Properties
+    private var timer: Timer?
+}
+
+// MARK: - Life Cycle
+extension TDModalAlertView {
+    
+    override public func didMoveToSuperview() {
+        super.didMoveToSuperview()
         setUpView()
-    }
-    
-    public required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        setUpView()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+            DispatchQueue.main.async {
+                self.show()
+            }
+        }
     }
 }
 
@@ -34,42 +98,77 @@ public class TDModalAlertView: UIView {
 extension TDModalAlertView {
     
     private func setUpView() {
-        let bundle = Bundle(for: type(of: self))
-        let nib = UINib(nibName: self.nibName, bundle: bundle)
-        self.contentView = nib.instantiate(withOwner: self, options: nil).first as? UIView
-        addSubview(contentView)
+        setUpContainerView()
+        setUpVisualEffectView()
+        setUpContentView()
+        setUpImageView()
+        setUpHeadlineLabel()
+        setUpMessageLabel()
+    }
+    
+    private func setUpContainerView() {
+        addSubview(containerView)
         
-        contentView.center = self.center
-        contentView.autoresizingMask = []
-        contentView.translatesAutoresizingMaskIntoConstraints = true
+        containerView.topAnchor.constraint(equalTo: topAnchor).isActive = true
+        containerView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
+        containerView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
+        containerView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+    }
+    
+    private func setUpVisualEffectView() {
+        containerView.addSubview(visualEffectView)
         
-        headlineLabel.text = ""
-        subheadLabel.text = ""
-        contentView.alpha = 0.0
-        contentView.layer.cornerRadius = 4
-        contentView.layer.masksToBounds = true
+        visualEffectView.widthAnchor.constraint(equalToConstant: 200).isActive = true
+        visualEffectView.heightAnchor.constraint(equalToConstant: 200).isActive = true
+        visualEffectView.centerYAnchor.constraint(equalTo: containerView.centerYAnchor).isActive = true
+        visualEffectView.centerXAnchor.constraint(equalTo: containerView.centerXAnchor).isActive = true
     }
     
-    // Provide functions to update view
-    public func set(image: UIImage) {
-        self.statusImage.image = image
+    private func setUpContentView() {
+        visualEffectView.contentView.addSubview(contentView)
+        
+        contentView.topAnchor.constraint(equalTo: visualEffectView.contentView.topAnchor).isActive = true
+        contentView.leadingAnchor.constraint(equalTo: visualEffectView.contentView.leadingAnchor).isActive = true
+        contentView.trailingAnchor.constraint(equalTo: visualEffectView.contentView.trailingAnchor).isActive = true
+        contentView.bottomAnchor.constraint(equalTo: visualEffectView.contentView.bottomAnchor).isActive = true
     }
     
-     public func set(headline text: String) {
-        self.headlineLabel.text = text
+    private func setUpImageView() {
+        contentView.addSubview(statusImage)
+        
+        statusImage.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 20).isActive = true
+        statusImage.widthAnchor.constraint(equalToConstant: 80).isActive = true
+        statusImage.heightAnchor.constraint(equalToConstant: 80).isActive = true
+        statusImage.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
     }
     
-    public func set(subheading text: String) {
-        self.subheadLabel.text = text
+    private func setUpHeadlineLabel() {
+        contentView.addSubview(headlineLabel)
+        
+        headlineLabel.topAnchor.constraint(equalTo: statusImage.bottomAnchor, constant: 10).isActive = true
+        headlineLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true
+        headlineLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
+        headlineLabel.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
     }
     
-    public override func didMoveToSuperview() {
-        // Fade in when added to superview
-        // Then add a timer to remove the view
-      self.contentView.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
+    private func setUpMessageLabel() {
+        contentView.addSubview(messageLabel)
+        
+        messageLabel.topAnchor.constraint(equalTo: headlineLabel.bottomAnchor, constant: 10).isActive = true
+        messageLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor).isActive = true
+        messageLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor).isActive = true
+        messageLabel.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
+    }
+}
+
+// MARK: - Actions
+extension TDModalAlertView {
+    
+    private func show() {
+        containerView.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
         UIView.animate(withDuration: 0.15, animations: {
-            self.contentView.alpha = 1.0
-            self.contentView.transform = CGAffineTransform.identity
+            self.containerView.alpha = 1.0
+            self.containerView.transform = CGAffineTransform.identity
         }) { _ in
             self.timer = Timer.scheduledTimer(
                 timeInterval: TimeInterval(3.0),
@@ -85,10 +184,26 @@ extension TDModalAlertView {
         UIView.animate(
             withDuration: 0.15,
             animations: {
-            self.contentView.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
-            self.contentView.alpha = 0.0
+            self.containerView.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
+            self.containerView.alpha = 0.0
         }) { _ in
             self.removeFromSuperview()
         }
+    }
+}
+
+// MARK: - Public APIs
+extension TDModalAlertView {
+    
+    public func set(image: UIImage) {
+        self.statusImage.image = image
+    }
+    
+     public func set(headline text: String) {
+        self.headlineLabel.text = text
+    }
+    
+    public func set(message text: String) {
+        self.messageLabel.text = text
     }
 }
