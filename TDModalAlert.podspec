@@ -28,15 +28,15 @@ A customized modal alert for iOS written in Swift 5
   s.source           = { :git => 'https://github.com/duongdinhhong/TDModalAlert.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '11.0'
 
   s.source_files = 'TDModalAlert/Classes/*'
   
   s.swift_versions = '5.0'
   
-   # s.resource_bundles = {
-   # 'ic_success' => ['TDModalAlert/Assets/ic_success.png']
-   # }
+  #s.resource_bundles = {
+   #'ic_success' => ['TDModalAlert/Assets/*']
+  #}
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'

@@ -16,7 +16,6 @@
 		2BCDCC795F91DEB649B246BFE003E432 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BD4ED544B638D07C7D755AF1C27116A /* Foundation.framework */; };
 		2DCFF0CE0BD295F1D46D3247F36B192C /* UIImage+Compare.m in Sources */ = {isa = PBXBuildFile; fileRef = EF53D290F564A9B10CEF56C9DC2010F2 /* UIImage+Compare.m */; };
 		3456EDF82396A0D90018FA66 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 3456EDF72396A0D90018FA66 /* .gitkeep */; };
-		3456EDFB2396A0E60018FA66 /* TDModalAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3456EDF92396A0E60018FA66 /* TDModalAlertView.xib */; };
 		3456EDFC2396A0E60018FA66 /* TDModalAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3456EDFA2396A0E60018FA66 /* TDModalAlertView.swift */; };
 		3456EE012396A6410018FA66 /* ic_success.png in Resources */ = {isa = PBXBuildFile; fileRef = 3456EE002396A6410018FA66 /* ic_success.png */; };
 		40039E0AF0D764360B1D4FC4F7950D2E /* UIApplication+StrictKeyWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A3ACA72AE9B776E644F6D159AB3E80B /* UIApplication+StrictKeyWindow.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -80,7 +79,6 @@
 		26D8C0916282746532B6EB1C914D7B84 /* Pods-TDModalAlert_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TDModalAlert_Tests-umbrella.h"; sourceTree = "<group>"; };
 		2B2AE408216D9623734FCBC72FB54731 /* Pods-TDModalAlert_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TDModalAlert_Example-Info.plist"; sourceTree = "<group>"; };
 		3456EDF72396A0D90018FA66 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
-		3456EDF92396A0E60018FA66 /* TDModalAlertView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TDModalAlertView.xib; sourceTree = "<group>"; };
 		3456EDFA2396A0E60018FA66 /* TDModalAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TDModalAlertView.swift; sourceTree = "<group>"; };
 		3456EE002396A6410018FA66 /* ic_success.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_success.png; sourceTree = "<group>"; };
 		35CD92FC77672E1C01603353408ADF19 /* Pods-TDModalAlert_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TDModalAlert_Tests-dummy.m"; sourceTree = "<group>"; };
@@ -174,7 +172,6 @@
 			isa = PBXGroup;
 			children = (
 				3456EDFA2396A0E60018FA66 /* TDModalAlertView.swift */,
-				3456EDF92396A0E60018FA66 /* TDModalAlertView.xib */,
 				3456EDF72396A0D90018FA66 /* .gitkeep */,
 			);
 			name = Classes;
@@ -544,7 +541,6 @@
 			files = (
 				3456EE012396A6410018FA66 /* ic_success.png in Resources */,
 				3456EDF82396A0D90018FA66 /* .gitkeep in Resources */,
-				3456EDFB2396A0E60018FA66 /* TDModalAlertView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -754,7 +750,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/FBSnapshotTestCase/FBSnapshotTestCase-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/FBSnapshotTestCase/FBSnapshotTestCase-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/FBSnapshotTestCase/FBSnapshotTestCase.modulemap";
 				PRODUCT_MODULE_NAME = FBSnapshotTestCase;
@@ -787,7 +783,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/TDModalAlert/TDModalAlert-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/TDModalAlert/TDModalAlert-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/TDModalAlert/TDModalAlert.modulemap";
 				PRODUCT_MODULE_NAME = TDModalAlert;
@@ -943,7 +939,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/TDModalAlert/TDModalAlert-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/TDModalAlert/TDModalAlert-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/TDModalAlert/TDModalAlert.modulemap";
 				PRODUCT_MODULE_NAME = TDModalAlert;
@@ -975,7 +971,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/FBSnapshotTestCase/FBSnapshotTestCase-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/FBSnapshotTestCase/FBSnapshotTestCase-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/FBSnapshotTestCase/FBSnapshotTestCase.modulemap";
 				PRODUCT_MODULE_NAME = FBSnapshotTestCase;
