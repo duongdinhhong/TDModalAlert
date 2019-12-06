@@ -15,16 +15,13 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         view.backgroundColor = .lightGray
+    }
+    
+    @IBAction func showAlertButtonDidTap(_ sender: Any) {
         let alert = TDModalAlertView(frame: view.bounds)
         alert.set(headline: "Success")
         alert.set(message: "You've successfully showed alert !")
-        view.addSubview(alert)
+        alert.show(in: self)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
 }
 

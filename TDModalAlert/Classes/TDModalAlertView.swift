@@ -77,6 +77,15 @@ public class TDModalAlertView: UIView {
     
     // MARK: - Properties
     private var timer: Timer?
+    
+    public override init(frame: CGRect) {
+        super.init(frame: frame)
+        setUpView()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 }
 
 // MARK: - Life Cycle
@@ -85,12 +94,6 @@ extension TDModalAlertView {
     override public func didMoveToSuperview() {
         super.didMoveToSuperview()
         setUpView()
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
-            DispatchQueue.main.async {
-                self.show()
-            }
-        }
     }
 }
 
@@ -164,9 +167,12 @@ extension TDModalAlertView {
 // MARK: - Actions
 extension TDModalAlertView {
     
-    private func show() {
-        containerView.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
+    public func show(in viewController: UIViewController) {
+        alpha = 0
+        viewController.view.addSubview(self)
+        self.containerView.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
         UIView.animate(withDuration: 0.15, animations: {
+            self.alpha = 1
             self.containerView.alpha = 1.0
             self.containerView.transform = CGAffineTransform.identity
         }) { _ in
